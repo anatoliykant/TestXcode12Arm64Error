@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TestXcode12Arm64Error"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A short description of TestXcode12Arm64Error."
 
   # This description is used to generate tags and improve search results.
@@ -68,7 +68,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
+  spec.ios.deployment_target = "12.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -93,6 +93,9 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "TestXcode12Arm64Error/**/*.{h,m,swift}"
   spec.exclude_files = "Classes/Exclude"
+
+  spec.dependency 'RealmSwift', '5.4.8'
+
   spec.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   # spec.public_header_files = "Classes/**/*.h"
